@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'docker run ds python -m pytest /code/tests/'
+        sh 'docker run ds python -m pytest /code/tests'
       }
     }
     stage('Deploy') {
