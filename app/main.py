@@ -1,6 +1,7 @@
 from typing import List, Optional, Dict
 from fastapi import FastAPI, HTTPException
 from fastapi.encoders import jsonable_encoder
+from fastapi.testclient import TestClient
 from pydantic import BaseModel
 import uvicorn
 import json
