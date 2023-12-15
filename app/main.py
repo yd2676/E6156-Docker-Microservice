@@ -82,6 +82,10 @@ posts = load_json_data_to_model(dPath)
 topic_arn = "arn:aws:sns:us-east-2:538930638837:Send_email"
 #topic_arn = "arn:aws:sns:us-east-2:538930638837:send_example"
 
+@app.get("/")
+async def read_main():
+    return {"Docker Microservice: Version 1.0"}
+
 @app.get("/posts", response_model=List[Post])
 async def get_all_posts():
     return list(posts.values())
