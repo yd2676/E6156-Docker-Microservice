@@ -11,3 +11,4 @@ starlette==0.27.0
 typing_extensions==4.7.1
 uvicorn==0.24.0.post1
 boto3==1.29.1
+httpx==0.25.2
