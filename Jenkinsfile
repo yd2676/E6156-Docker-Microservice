@@ -22,15 +22,7 @@ pipeline {
           sh 'docker push $DOCKER_IMAGE'
         }
       }
-    }
-    stage('Deploy on AWS') {
-      steps {
-        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-          AWS("--region=us-east-2 ec2 docker run -e AWS_ACCESS_KEY_ID=AKIAX26WE572YOSOQJIF -e AWS_SECRET_ACCESS_KEY=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 -e AWS_DEFAULT_REGION=us-east-2 -t -i -p 8012:8012 yd2676/ds")
-        }
-      }
-    }
-    
+    }    
   }
   post {
     always {
