@@ -84,7 +84,7 @@ topic_arn = "arn:aws:sns:us-east-2:538930638837:Send_email"
 
 @app.get("/")
 async def read_main():
-    return {"Docker Microservice: Version 1.0"}
+    return {"Docker Microservice: Version 2.0"}
 
 @app.get("/posts", response_model=List[Post])
 async def get_all_posts():
