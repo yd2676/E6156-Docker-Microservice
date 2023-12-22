@@ -10,8 +10,6 @@ RUN pip install pytest
 
 COPY ./app /code/app
 
-ADD ./app/sample_data.json /code/
-
 COPY ./tests /code/tests
 
 ENV AWS_DEFAULT_REGION=us-east-2
