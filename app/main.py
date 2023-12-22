@@ -260,12 +260,12 @@ def send_message_to_sns_topic(topic_arn, message, subject=None):
 
 my_sql_data_service = MySQLDataService()
 
-topic_arn = "arn:aws:sns:us-east-2:538930638837:Send_email"
-#topic_arn = "arn:aws:sns:us-east-2:538930638837:send_example"
+#topic_arn = "arn:aws:sns:us-east-2:538930638837:Send_email"
+topic_arn = "arn:aws:sns:us-east-2:538930638837:send_example"
 
 @app.get("/")
 async def read_main():
-    return {"Docker Microservice: Version 1.0"}
+    return {"Docker Microservice: Version 2.0"}
 
 @app.get("/posts")
 async def get_all_posts():
